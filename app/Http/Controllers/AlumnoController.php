@@ -36,7 +36,15 @@ class AlumnoController extends Controller
     }
 
     // Otros métodos generados por el resource (puedes implementarlos si quieres)
-    public function show(Alumno $alumno) {}
+    public function show(Alumno $alumno) {
+            //Para ver al alumno
+         $alumno->nombre = $request->nombre;
+         $alumno->correo = $request->correo;
+         $alumno->fecha_nacimiento = $request->fecha_nacimiento;
+         $alumno->ciudad = $request->ciudad;
+         
+         return view('alumnos.show', compact('alumno'));
+    }
     
     public function edit(Alumno $alumno) {
         return view('alumnos.editar-alumnos', compact('alumno'));
@@ -50,5 +58,8 @@ class AlumnoController extends Controller
  
          return redirect()->route('alumnos.index', $mensaje);
     }
-    public function destroy(Alumno $alumno) {}
+    public function destroy(Alumno $alumno) {
+            $alumno->delete();
+            return redirect()->route('alumnos.index');
+    }
 }
