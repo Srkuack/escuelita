@@ -20,7 +20,7 @@
             </div>
         </header>
     </body>
-    <div class="container mt-4">
+    <div class="container mt-4 p-4 bg-white rounded shadow">
         <h1>Registrar Nuevo Alumno</h1>
         <form action="{{ route('alumnos.store') }}" method="POST">
             @csrf

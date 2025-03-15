@@ -49,7 +49,7 @@
                         <td>{{ $alumno->fecha_nacimiento }}</td>
                         <td>{{ $alumno->ciudad }}</td>
                         <td><button class="btn btn-warning btn-sm" onclick="window.location.href='{{ route('alumnos.edit', $alumno) }}'">Editar</button></td>
-                        <td><button class="btn btn-danger btn-sm">Eliminar</button></td>
+                        <td><button class="btn btn-info" onclick="window.location.href='{{ route('alumnos.show', $alumno) }}'">Ver</button></td>
                     </tr>
                 @endforeach
             </tbody>
