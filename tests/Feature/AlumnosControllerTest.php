@@ -17,8 +17,4 @@ class AlumnosControllerTest extends TestCase
 
         $response->assertStatus(200);
     }
-    /**@test */
-    public function muestra_formulario():void{
-        
-    }
 }
